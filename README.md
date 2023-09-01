@@ -1,2 +1,2 @@
-# UNIDERP-2023.2-ALG_E_ESTR_DE_DADOS
+# UNIDERP-2023.2 - Algoritmos e Estruturas de Dados
  
