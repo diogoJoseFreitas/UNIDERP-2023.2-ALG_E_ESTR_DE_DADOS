@@ -1,32 +1,32 @@
 #include <stdio.h>
 #include <locale.h>
 
-float salario(float n1, float n2) // fun��o para calculo do salario bruto
+float salario(float n1, float n2) // função para calculo do salario bruto
 {
 	float resultado = n1 * n2;
 	return (resultado);
 }
-float inss(float n1) // fun��o para calculo do inss
+float inss(float n1) // função para calculo do inss
 {
 	float resultadoi = n1 * 0.1;
 	return (resultadoi);
 }
-float fgts(float n1) // fun��o para calculo do fgts
+float fgts(float n1) // função para calculo do fgts
 {
 	float resultadof = n1 * 0.11;
 	return (resultadof);
 }
-float ir(float n1) // fun��o para calculo do imposto de renda
+float ir(float n1) // função para calculo do imposto de renda
 {
 	float imposto = n1 * 0.1;
 	return (imposto);
 }
-float descontos(float n1, float n2) // fun��o para calculo dos descontos
+float descontos(float n1, float n2) // função para calculo dos descontos
 {
 	float desconto = n1 + n2; 
 	return (desconto);
 }
-float liquido(float n1, float n2) // fun��o para calculo do salario liquido
+float liquido(float n1, float n2) // função para calculo do salario liquido
 {
 	float resultadol = n1 - n2;
 	return (resultadol);
