@@ -1,0 +1,17 @@
+
+struct Lista
+{
+    int num;
+    struct Lista *prox;
+};
+typedef struct Lista node;
+
+func adicionaNovoNoh (node cabeca){
+    node *temp = &cabeca;
+    node *noh = (node*) malloc(sizeOf(node));
+    *noh.prox = NULL;   
+    while(temp.prox != NULL){
+        temp = *temp.prox;
+    }
+    temp.prox = noh;
+}
