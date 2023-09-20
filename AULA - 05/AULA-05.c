@@ -63,8 +63,7 @@ int main(int argc, char const *argv[])
     node cabeca;
     cabeca.prox = NULL;
     
-    do
-    {
+    while (true){
         switch (menu())
         {
         case 1:
@@ -86,6 +85,6 @@ int main(int argc, char const *argv[])
             printf("Opcao Invalida.\n");
             break;
         }
-    } while (true);
+    }
     return 0;
 }
