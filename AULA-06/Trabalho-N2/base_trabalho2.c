@@ -49,7 +49,6 @@ void inserir_fim(node* CABECA_LISTA, node* novo_item)
     
 }
 
-
 void remover(node* CABECA_LISTA, int conta_to_remove)
 {
     // Função para remover um nó com base no número da conta (considero que seja o melhor dos três atributos para busca)
