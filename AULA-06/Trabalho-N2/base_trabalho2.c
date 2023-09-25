@@ -8,14 +8,10 @@ struct Banco {
     float saldo; 
     struct Banco *proximo; 
 }; 
-typedef struct Banco node; 
-
-node achar_final_da_lista(){
-
-}
+typedef struct Banco node;
 
 int eh_vazia(node* CABECA_LISTA){
-    //funçâo interessante para evitar repetição de alguns códigos, tendo em vista que se repetem ao longo da atividade
+    // Função para verificar se a lista está vazia
     if (CABECA_LISTA->proximo == NULL)
     {
         printf("Lista vazia...\n");
@@ -24,6 +20,7 @@ int eh_vazia(node* CABECA_LISTA){
 }
 
 node* cadastro(){
+    // Função para cadastrar uma nova conta (Serve para facilitar a reusabilidade do código)
     node *novo_item = (node *)malloc(sizeof(node));
     if (novo_item == NULL) {
         fprintf(stderr, "Erro: falha na alocação de memória.\n");
@@ -41,6 +38,7 @@ node* cadastro(){
 
 void inserir_fim(node* CABECA_LISTA, node* novo_item)
 {
+    // Função para inserir um nó no final da lista
     node* ultimo = CABECA_LISTA;
     while (ultimo->proximo != NULL)
     {
@@ -54,6 +52,7 @@ void inserir_fim(node* CABECA_LISTA, node* novo_item)
 
 void remover(node* CABECA_LISTA, int conta_to_remove)
 {
+    // Função para remover um nó com base no número da conta (considero que seja o melhor dos três atributos para busca)
     if (!eh_vazia(CABECA_LISTA))
     {
         node* anterior = CABECA_LISTA;
@@ -108,7 +107,6 @@ void imprime(node* CABECA_LISTA)
 }
 
 int menu(int* opcao){
-    // por questôes de semântica optei por mover essa parte do menu
     printf("\nDigite 1 para Listar\n");
     printf("Digite 2 para Inserir no fim\n");
     printf("Digite 3 para Remover\n");
