@@ -3,7 +3,7 @@
 #include <locale.h>
 
 struct Banco { 
-    int numero_conta;  
+    int numero
     char nome_cliente[30]; 
     float saldo; 
     struct Banco *proximo; 
@@ -28,7 +28,7 @@ node* cadastro(){
     }
     novo_item->proximo = NULL;
     printf("Insira o número da conta:");
-    scanf("%d", &novo_item->numero_conta);
+    scanf("%d", &novo_item->numero
     printf("Insira o nome do Cliente(Máx 30 caracteres): ");
     scanf("%30s", &novo_item->nome_cliente);
     printf("Insira o valor do slado do cliente: R$");
@@ -59,7 +59,7 @@ void remover(node* CABECA_LISTA, int conta_to_remove)
         int encontrou = 0;
         while(to_remove->proximo != NULL)
         {
-            if (to_remove->numero_conta == conta_to_remove)
+            if (to_remove->numeronta_to_remove)
             {
                 encontrou = 1;
                 break;
@@ -95,7 +95,7 @@ void imprime(node* CABECA_LISTA)
         {
             printf("\n-----------------------------------------");
             printf("\nEnd node: %d\n", aux);
-            printf("Numero da conta: %d\n", aux->numero_conta);
+            printf("Numero da conta: %d\n", aux->numero
             printf("Saldo da conta: %f\n", aux->saldo);
             printf("Nome cliente: %s\n", aux->nome_cliente);
             printf("End do prox: %d\n\n", aux->proximo);
@@ -121,7 +121,7 @@ int main()
     node* CABECA_LISTA = (node *) malloc(sizeof(node));
     CABECA_LISTA->proximo = NULL;
     int opt;
-    int numero_conta;
+    int numero;
     do
     {
         menu(&opt);
@@ -137,8 +137,8 @@ int main()
                 break;
             case 3:
                 printf("Insira o número da conta a remover: ");
-                scanf("%d", &numero_conta);
-                remover(CABECA_LISTA, numero_conta);
+                scanf("%d", &numero);
+                remover(CABECA_LISTA, numero);
                 break;
             case 0:
                 printf("Saindo...\n");
